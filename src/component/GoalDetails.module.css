@@ -1,0 +1,134 @@
+
+.goalContainer {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr 1fr;
+  gap: 5px;
+  grid-template-areas: 
+    "name date category priority" 
+    "goalBtns goalBtns goalBtns goalBtns" ;
+}
+
+.goalName {
+  grid-area: name;
+   width: 100%;
+  height: 45px;
+  /* padding: 5px;  */
+}
+
+
+
+.goalDate {
+  grid-area: date;
+  width: 100%;
+  height: 45px;
+  /* padding: 5px;  */
+}
+
+.goalName input,
+.goalDate input {
+  width: 100%;
+  height: 45px;
+ 
+  outline: none;
+}
+
+
+
+
+.goalCategory {
+  grid-area: category;
+  width: 100%;
+  height: 45px;
+}
+
+.goalCategory select {
+   width: 100%;
+  height: 45px;
+  padding: 5px;
+  outline: none; 
+}
+
+.goalpriority{
+   grid-area: priority;
+   width: 100%;
+  height: 45px;
+}
+.goalpriority select {
+  width: 100%;
+  height: 45px;
+  padding: 5px;
+  outline: none;
+  
+}
+
+.goalBtns {
+  grid-area: goalBtns;
+  display: flex ;
+  flex-wrap: wrap;
+}
+
+.goalBtns button {
+ margin-left: 5px;
+  min-width: 100px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.goalBtns input {
+  margin-left: 5px;
+  margin-top: 3px;
+  width: 30px;
+   height: 30px;
+   padding: 5px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .goalContainer{
+  
+     grid-template-columns: 1fr 0.6fr 0.7fr 0.7fr;
+     padding: 10px;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  .goalContainer{
+     grid-template-columns:  1fr 1fr;
+     grid-template-areas: 
+    " name date" 
+    "category priority"
+     "goalBtns goalBtns";
+     text-align: center;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .goalContainer{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "name"
+    "date" 
+    "category"
+    "priority"
+     "goalBtns";
+     margin-bottom: 5px;
+     text-align: center;
+  }
+
+  .goalPriority select {
+    width: 100%;
+    height: 45px;
+    padding: 5px;
+    outline: none;
+    margin-top: -20px;
+  }
+}
+
+
+
+
+

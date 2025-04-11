@@ -1,0 +1,77 @@
+body {
+  padding: 20px;
+  border: 1px solid white;
+  background: #f8f8f8;;
+  border-radius: 10px;
+  width : 90%;
+ margin: 0 auto;
+}
+
+.goal-container {
+
+  display: grid;
+  grid-template-columns: 1fr 2fr ;
+  gap: 10px;
+  grid-template-areas: 
+  "header header"
+  " progress form "
+  "filters   goal "
+  ;
+ 
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  background: white;
+  
+}
+.header {
+  grid-area: header;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.goal-form {
+  grid-area: form;
+}
+
+.goal-list {
+  grid-area: goal;
+}
+.goal-filter {
+  grid-area: filters;
+}
+.progress-bar {
+  grid-area: progress;
+}
+.high-priority {
+  background-color: red;
+}
+.medium-priority {
+  background-color: yellow;
+}
+.low-priority{
+  background-color: green;
+}
+
+.newclass{
+  background-color: grey;
+  text-decoration: line-through;
+}
+
+ 
+
+@media screen and (max-width: 480px){
+  .goal-container {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "form"
+    "goal "
+    "filters"
+    "progress" ;
+   
+  }
+}

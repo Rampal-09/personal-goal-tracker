@@ -1,0 +1,45 @@
+.goalForm {
+  display: grid;
+  width: 75%;
+   padding: 0 2%;
+   margin: 0 auto;
+  gap: 10px;
+  
+}
+
+.goalCategory select {
+   width :100%;
+   max-width: 200px;
+   padding: 8px;
+   margin-left: 3px;
+   border: 1px solid black;
+   border-radius: 3px;
+}
+.goalCategory option {
+  font-size: 17px;
+}
+
+.goalpriority select {
+  width :100%;
+   max-width: 200px;
+   padding: 8px;
+   margin-left: 3px;
+   border: 1px solid black;
+   border-radius: 3px;
+}
+
+@media screen and (max-width:480px) {
+  .goalForm {
+    width:100%;
+  }
+  .goalCategory select {
+    width :100%;
+    max-width: 200px; 
+     padding: 8px; 
+     margin-left: 3px; 
+    border: 1px solid black;
+    border-radius: 3px;
+ }
+  
+}
+

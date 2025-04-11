@@ -1,0 +1,47 @@
+
+
+.filterSelect select {
+     max-width: 200px;
+     width: 100%;
+     padding: 6px;
+     text-align: center;
+}
+
+.filterSelect {
+  text-align: left;
+  padding: 10px;
+}
+.filterPad{
+   padding: 10px;
+}
+
+.filterBtn  {
+   display: flex;
+   flex-wrap: wrap;
+   
+}
+.filterBtn button {
+   margin-left: 5px;
+   min-width: 100px;
+   margin-bottom: 5px;
+   padding: 5px;
+   border: 1px solid black;
+   border-radius: 10px;
+   
+}
+
+.sortBtn {
+
+ display: flex;
+   flex-wrap: wrap;
+   
+}
+
+.sortBtn button {
+  margin-left: 5px;
+   min-width: 100px;
+   margin-bottom: 5px;
+   padding: 5px;
+   border: 1px solid black;
+   border-radius: 10px;
+}
