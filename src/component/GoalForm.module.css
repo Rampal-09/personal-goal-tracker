@@ -1,45 +1,117 @@
 .goalForm {
   display: grid;
-  width: 75%;
-   padding: 0 2%;
-   margin: 0 auto;
-  gap: 10px;
-  
+  width: 100%;
+  gap: 20px;
 }
 
-.goalCategory select {
-   width :100%;
-   max-width: 200px;
-   padding: 8px;
-   margin-left: 3px;
-   border: 1px solid black;
-   border-radius: 3px;
-}
-.goalCategory option {
-  font-size: 17px;
+.goalForm h3 {
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  text-align: center;
 }
 
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.formGroup input,
+.goalCategory select,
 .goalpriority select {
-  width :100%;
-   max-width: 200px;
-   padding: 8px;
-   margin-left: 3px;
-   border: 1px solid black;
-   border-radius: 3px;
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+  color: #2d3748;
 }
 
-@media screen and (max-width:480px) {
+.formGroup input:focus,
+.goalCategory select:focus,
+.goalpriority select:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-1px);
+}
+
+.goalCategory select,
+.goalpriority select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.goalCategory option,
+.goalpriority option {
+  font-size: 1rem;
+  padding: 8px;
+  color: #2d3748;
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+.submitBtn:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 480px) {
   .goalForm {
-    width:100%;
+    gap: 15px;
   }
-  .goalCategory select {
-    width :100%;
-    max-width: 200px; 
-     padding: 8px; 
-     margin-left: 3px; 
-    border: 1px solid black;
-    border-radius: 3px;
- }
-  
-}
 
+  .formGroup input,
+  .goalCategory select,
+  .goalpriority select {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+
+  .submitBtn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}

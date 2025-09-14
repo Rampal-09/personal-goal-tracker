@@ -1,47 +1,149 @@
+.filterPad {
+  padding: 0;
+}
 
+.filterTitle {
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
 
-.filterSelect select {
-     max-width: 200px;
-     width: 100%;
-     padding: 6px;
-     text-align: center;
+.filterSection {
+  margin-bottom: 25px;
+}
+
+.filterSection:last-child {
+  margin-bottom: 0;
+}
+
+.sectionLabel {
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .filterSelect {
-  text-align: left;
-  padding: 10px;
-}
-.filterPad{
-   padding: 10px;
+  margin-bottom: 8px;
 }
 
-.filterBtn  {
-   display: flex;
-   flex-wrap: wrap;
-   
-}
-.filterBtn button {
-   margin-left: 5px;
-   min-width: 100px;
-   margin-bottom: 5px;
-   padding: 5px;
-   border: 1px solid black;
-   border-radius: 10px;
-   
+.filterSelect select {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #2d3748;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
 }
 
+.filterSelect select:focus,
+.filterSelect select:hover {
+  border-color: #667eea;
+  background: white;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.filterBtn,
 .sortBtn {
-
- display: flex;
-   flex-wrap: wrap;
-   
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
+.filterBtn button,
 .sortBtn button {
-  margin-left: 5px;
-   min-width: 100px;
-   margin-bottom: 5px;
-   padding: 5px;
-   border: 1px solid black;
-   border-radius: 10px;
+  flex: 1;
+  min-width: 80px;
+  padding: 8px 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #4a5568;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.filterBtn button:hover,
+.sortBtn button:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.filterBtn button:active,
+.sortBtn button:active {
+  transform: translateY(0);
+}
+
+.filterBtn button.active,
+.sortBtn button.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Priority-specific button styles */
+.filterBtn button[data-priority="high"]:hover {
+  background: #ff6b6b;
+  border-color: #ff6b6b;
+}
+
+.filterBtn button[data-priority="medium"]:hover {
+  background: #ffd93d;
+  border-color: #ffd93d;
+  color: #2d3748;
+}
+
+.filterBtn button[data-priority="low"]:hover {
+  background: #6bcf7f;
+  border-color: #6bcf7f;
+}
+
+/* Status-specific button styles */
+.filterBtn button[data-status="complete"]:hover {
+  background: #48bb78;
+  border-color: #48bb78;
+}
+
+.filterBtn button[data-status="pending"]:hover {
+  background: #ed8936;
+  border-color: #ed8936;
+}
+
+@media screen and (max-width: 480px) {
+  .filterBtn button,
+  .sortBtn button {
+    min-width: 70px;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  .filterSection {
+    margin-bottom: 20px;
+  }
+
+  .filterTitle {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
 }
